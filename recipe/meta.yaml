@@ -1,5 +1,5 @@
 {% set name = "fparser" %}
-{% set version = "0.0.10" %}
+{% set version = "0.0.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2b5051e43a3e782c30f85cacabdb597737b8ec1205a91032d7584b0e61f27a2f
+  sha256: 35a0831d0c4e4aa47edfc02442e24519b0da066a3ed1de58e3ee5442847af614
 
 build:
   entry_points:
     - fparser2=fparser.scripts.fparser2:main
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
