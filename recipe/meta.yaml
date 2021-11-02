@@ -1,5 +1,5 @@
 {% set name = "fparser" %}
-{% set version = "0.0.11" %}
+{% set version = "0.0.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 35a0831d0c4e4aa47edfc02442e24519b0da066a3ed1de58e3ee5442847af614
+  sha256: 3c7e939fcc6b010de717eb6bd5102750dea26f15b6f6346cb285652b6a55818a
 
 build:
   entry_points:
