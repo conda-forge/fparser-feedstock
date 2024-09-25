@@ -14,7 +14,9 @@ build:
     - fparser2=fparser.scripts.fparser2:main
   noarch: python
   number: 0
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  script: |
+    export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+    {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
   host:
@@ -34,6 +36,9 @@ test:
     - fparser.two
   commands:
     - fparser2 --help
+    # check the version
+    - python -c "import fparser; print(fparser.__version__); assert fparser.__version__ == '{{ version }}'"
+
 
 about:
   home: https://github.com/stfc/fparser
