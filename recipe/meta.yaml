@@ -14,13 +14,17 @@ build:
     - fparser2=fparser.scripts.fparser2:main
   noarch: python
   number: 1
+  script_env:
+    - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
   script: |
-    export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
   host:
     - pip
+    - setuptools
+    - setuptools-scm
+    - setuptools_scm_git_archive
     - python >=2.7
   run:
     - python >=2.7
