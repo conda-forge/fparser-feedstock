@@ -3,15 +3,11 @@ About fparser-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/fparser-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/stfc/fparser
+
 
 Package license: BSD-3-Clause
 
 Summary: Modern Fortran Parser
-
-Development: https://github.com/stfc/fparser
-
-Documentation: https://github.com/stfc/fparser
 
 Current build status
 ====================
