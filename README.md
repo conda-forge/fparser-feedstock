@@ -150,5 +150,4 @@ Feedstock Maintainers
 * [@MatthewHambley](https://github.com/MatthewHambley/)
 * [@arporter](https://github.com/arporter/)
 * [@matthewrmshin](https://github.com/matthewrmshin/)
-* [@rupertford](https://github.com/rupertford/)
 
