@@ -13,18 +13,20 @@ build:
   entry_points:
     - fparser2=fparser.scripts.fparser2:main
   noarch: python
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
     - pip
-    - python >=2.7
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=2.7
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - fparser
     - fparser.common
