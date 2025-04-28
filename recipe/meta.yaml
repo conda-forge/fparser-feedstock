@@ -22,15 +22,17 @@ requirements:
   host:
     - pip
     - setuptools
-    - setuptools-scm
+    - setuptools-scm <8
     - setuptools_scm_git_archive
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
+    - setuptools-scm
 
 test:
   requires:
     - python {{ python_min }}
+    - pip
   imports:
     - fparser
     - fparser.common
@@ -43,6 +45,7 @@ test:
     - fparser2 --help
     # check the version
     - python -c "import fparser; print(fparser.__version__); assert fparser.__version__ == '{{ version }}'"
+    - pip check
 
 
 about:
